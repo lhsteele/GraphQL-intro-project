@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const expressGraphQL = require('express-graphql');
 const User = require('./models/user');
+const Post = require('./models/posts')
 const schema = require('./schema/schema');
 
 app.use(bodyParser.json());
@@ -18,6 +19,7 @@ app.use(
     graphiql: true
   })
 );
+
 
 mongoose 
   .connect(db, { useNewUrlParser: true })
